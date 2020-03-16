@@ -1,0 +1,134 @@
+% !TEX program = xelatex
+
+\documentclass{resume}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{progressbar}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+%\Large{
+%  \begin{tabu}{ c l r }
+%   \multirow{5}{1in}{\includegraphics[width=0.88in]{avatar}} & \scshape{Bin Yuan} & {Python~}\progressbar{0.75} \\
+%    & \email{yuanbin2014@gmail.com} & {Scala~}\progressbar{0.5} \\
+%    & \phone{(+86) 131-221-87xxx} & {Linux~}\progressbar{0.7} \\
+%    & \linkedin[billryan8]{https://www.linkedin.com/in/billryan8} & {Flask~}\progressbar{0.5} \\
+%    & \github[github.com/billryan]{https://github.com/billryan} & {Javascript~}\progressbar{0.5}
+%  \end{tabu}
+%}
+\Large{
+  \begin{tabularx}{\linewidth}{ X r }
+    \textbf{\LARGE 樊振豪} & \multirow{4}*{\includegraphics[scale = 0.15]{image_large}} \\
+    \email{fanzhenhao@pku.edu.cn} &  \\
+    \phone{(+86) 159-1067-0396} &  \\
+    \github[github.com/RiceReallyGood]{https://github.com/RiceReallyGood}
+  \end{tabularx}
+}
+
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{北京大学}}{2016.09 -- 至今\quad}
+\textit{在读博士研究生}\ 理论物理专业, 预计2021年6月毕业
+\datedsubsection{\textbf{浙江大学}}{2012.09 -- 2016.06}
+\textit{学士}\ 物理学
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{description}[parsep=0.5ex]
+  \item[编程语言]: C++, Wolfram Mathematica, \LaTeX, Python, Fortran
+  \begin{itemize}
+    \item C++: 能够利用C++实现比较大型的数值计算程序
+    \item Wolfram Mathematica: 熟练使用Mathematica处理数据
+    \item \LaTeX : 熟练使用 \LaTeX 编辑公式，实现论文排版
+    \item Python 和 Fortran: 了解常用语法
+  \end{itemize}
+  \item[平台]: Linux
+  \begin{itemize}
+    \item 熟悉linux的常用命令,熟悉linux下的项目编译工具make，cmake的使用，
+          能够在linux服务器上完成大型的数值计算。
+  \end{itemize} 
+\end{description}
+
+\section{\faUsers\ 项目经历}
+\begin{description}
+  \item[\href{https://github.com/RiceReallyGood/Quartic}{费米Hubbard模型的Quartic计算}]: 
+    发表\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.101.023310}{论文一篇}
+  \begin{itemize}
+    \item 利用OpenMP实现单个计算节点内多线程并行计算
+    \item 利用MPI实现节点间并行
+    \item 利用快速傅立叶变换，将原本需要$O(n^2)$的卷积操作，优化到$O(n \log (n))$
+    \item 利用Intel 的 MKL 实现了一维费米Hubbard链的精确对角化程序
+  \end{itemize} 
+  \item[\href{https://github.com/RiceReallyGood/BHM_QMC}{玻色Hubbard模型的Monte Carlo模拟}]\ 
+  \begin{itemize}
+    \item 用C++ 实现Directed Worm算法
+    \item 根据算法中时间片段是排好序的性质，利用二分法，将最频繁的查找操作从$O(n)$
+    降低到$O(\log (n))$
+  \end{itemize} 
+\end{description}
+%\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
+%\role{Summer Intern}{Manager: xxx}
+%Brief introduction: xxx.
+%\begin{itemize}
+%  \item Implemented xxx feature
+%  \item Optimized xxx 5\%
+%  \item xxx
+%\end{itemize}
+
+%\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
+%\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
+%Brief introduction: xxx
+%\begin{itemize}
+%  \item Implemented xxx feature
+%  \item Optimized xxx 5\%
+%  \item xxx
+%\end{itemize}
+
+%\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
+%\role{\LaTeX, Maintainer}{Individual Projects}
+%An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
+%\begin{itemize}
+%  \item Easy to be further customized or extended
+%  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
+%  \item FontAwesome 4.5.0 support
+%\end{itemize}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+% \section{\faCogs\ Skills}
+% \begin{itemize}[parsep=0.5ex]
+%   \item Programming Languages: C == Python > C++ > Java
+%   \item Platform: Linux
+%   \item Development: Web, xxx
+% \end{itemize}
+
+\section{\faicon{trophy}\ 荣誉和奖励}
+\begin{itemize}
+  \item \datedline{\textbf{方正奖学金}}{2016-2017}
+  \item \datedline{\textbf{北京大学三好学生}}{2016-2017}
+  \item \datedline{\textbf{方正奖学金}}{2017-2018}
+  \item \datedline{\textbf{优秀科研奖}}{2017-2018}
+  \item \datedline{\textbf{方正奖学金}}{2018-2019}
+  \item \datedline{\textbf{优秀科研奖}}{2018-2019}
+\end{itemize}
+
+%\section{\faInfo\ Miscellaneous}
+%\begin{itemize}[parsep=0.5ex]
+%  \item Blog: http://your.blog.me
+%  \item GitHub: https://github.com/username
+%  \item Languages: English - Fluent, Mandarin - Native speaker
+%\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
